@@ -1,0 +1,19 @@
+body { 
+
+  background: lightblue !important; 
+}
+
+ul li {
+  cursor: pointer;
+ } 
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+.col-md-8 {
+  /*color: #007bff;*/
+  /*border: 1px;
+  border-style: solid;*/
+}
