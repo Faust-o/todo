@@ -17,6 +17,22 @@ body {
 	padding-bottom: 5%;
 }
 
+.task-list {
+
+	overflow-y: scroll;
+	height: 350px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.task-list {
+    -ms-overflow-style: none;
+}
+
 .bg {
 
   padding: 40px;
@@ -34,8 +50,16 @@ ul li {
   list-style: none;
   border-top: 2px solid white;
   padding-bottom: .35rem;
+
  } 
 
 ul li.checked {
   color: #007bff;
   text-decoration: line-through;
+}
+
+.close {
+
+	opacity: 0.9 !important;
+	text-shadow: none !important;
+}
