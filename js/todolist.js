@@ -1,4 +1,4 @@
-let list = document.querySelector('ul');
+const list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
@@ -6,23 +6,29 @@ list.addEventListener('click', function(ev) {
 }, false);
 // Create a new list item when clicking on the "Add" button
 function myFunction() {
-  let li = document.createElement("li");
-  let inputValue = document.getElementById("newTask").value;
-  let t = document.createTextNode(inputValue);
+  const li = document.createElement("li");
+  const inputValue = document.getElementById("newTask").value;
+  const t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
     document.getElementById("ul").appendChild(li);
   }
+
+  const tasks = localStorage.getItem('todo-task');
+    if(tasks){  
+    }
+    localStorage.setItem('todo-task', inputValue);
+
   //clear
   document.getElementById("newTask").value = "";
 
-  let closeTask = document.getElementsByClassName("close");
+  const closeTask = document.getElementsByClassName("close");
   let i;
 
-  let span = document.createElement("SPAN");
-  let txt = document.createTextNode("Delete");
+  const span = document.createElement("SPAN");
+  const txt = document.createTextNode("DELETE");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
